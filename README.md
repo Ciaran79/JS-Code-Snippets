@@ -1,2 +1,1 @@
-# JS-Katas
-This is just a collection of some of my solutions to Codewars problems.
+Js Code snippets is a collection of JS solutions I made to solve certain problems and other useful patterns..
