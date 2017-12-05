@@ -1,3 +1,8 @@
 {
-    "python.linting.pylintEnabled": false
+    "python.linting.pylintEnabled": false,
+
+    "git.username": "Ciaran79",
+    "git.email": "ciarankamp@gmail.com"
+
 }
+
