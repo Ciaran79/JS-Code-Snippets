@@ -27,7 +27,9 @@
                 result = result + (numString.split("").push(numString.shift()).join());
         }
     }
-        return result;
+    function memorysizeConversion (memorysize){
+        return '1 kB'
+      }return result;
     
     }
 
