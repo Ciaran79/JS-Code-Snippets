@@ -2,7 +2,7 @@ function memorysizeConversion (memorysize){
 var newArray = memorysize.split(" ");
 var mult = 0;
 
-if (memorysize[1].indexOf("i")>0){
+if (memorysize[1].indexOf("i")!=-1){
     mult = 1.024;
 }
 else {
