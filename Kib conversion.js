@@ -2,54 +2,68 @@ function memorysizeConversion(memorysize) {
     var newArray = memorysize.split(" ");
     var mult = 0;
     var end = "";
-
-var result = "";
+    var toggle = 1;
+    var result = "";
 
     switch (newArray[1]) {
 
         case 'KiB':
             end = 'kB';
             mult = 1.024;
+            toggle = 1;
             break;
 
         case 'kB':
             end = 'KiB';
-            mult = 0.977;
+            mult = 1.024;
+            toggle = 0;
             break;
 
         case 'TiB':
             end = 'TB';
-            mult = 1.099511627776;
+            mult = 1.09951;
+            toggle = 1;
             break;
 
         case 'TB':
             end = 'TiB';
-            mult = 0.9095;
+            mult = 1.09951;
+            toggle = 0;
             break;
 
         case 'GiB':
             end = 'GB';
-            mult = 1.073741824;
+            mult = 1.07374;
+            toggle = 1;
             break;
 
         case 'GB':
             end = 'GiB';
-            mult = 0.9313948205361199;
+            mult = 1.07374;
+            toggle = 0;
             break;
 
-            case 'MiB':
+        case 'MiB':
             end = 'MB';
             mult = 1.048576;
+            toggle = 1;
             break;
 
-            case 'MB':
+        case 'MB':
             end = 'MiB';
-            mult = 0.9536973047684865;
+            mult = 1.048576;
+            toggle = 0;
             break;
     }
-result = newArray[0] *  mult;
-result = result.toFixed(3);
-result = parseFloat(result);
+
+    if (toggle == 1) {
+        result = newArray[0] * mult;
+    } else {
+        result = newArray[0] / mult;
+    }
+
+    result = result.toFixed(3);
+    result = parseFloat(result);
     return result + " " + end;
 }
 
