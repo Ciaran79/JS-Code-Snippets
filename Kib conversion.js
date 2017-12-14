@@ -47,7 +47,7 @@ var result = "";
             mult = 0.9536973047684865;
             break;
     }
-var result = newArray[0] *  mult;
+result = newArray[0] *  mult;
 result = result.toFixed(3);
 result = parseFloat(result);
     return result + " " + end;
