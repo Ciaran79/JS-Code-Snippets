@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/profile lookup.js"
+            "program": "${workspaceFolder}/Sum all.js"
         }
     ]
 }
