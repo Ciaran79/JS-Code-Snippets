@@ -16,7 +16,7 @@ function alphabetPosition(text) {
         }      
     });
     return result.trim();
-};
+}
 
 
 console.log(alphabetPosition("cazzon. foot, in the b£f!"));

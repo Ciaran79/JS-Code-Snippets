@@ -1,5 +1,5 @@
 
-// Setup
+
 var myObj = {
   gift: "pony",
   pet: "kitten",
@@ -7,7 +7,7 @@ var myObj = {
 };
 
 function checkObj(checkProp) {
-  // Your Code Here
+
   if (myObj.hasOwnProperty(checkProp)){
 
     var result = myObj[checkProp];
@@ -20,5 +20,5 @@ function checkObj(checkProp) {
   }
 }
 
-// Test your code by modifying these values
+
 console.log(checkObj("gift"));

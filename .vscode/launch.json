@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/.vscode\\Remove falsy values from an array.js"
+            "program": "${file}"
         }
     ]
 }
