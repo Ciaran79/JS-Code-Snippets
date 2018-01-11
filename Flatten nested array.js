@@ -1,35 +1,30 @@
 function steamrollArray(arr) {
-    var newArr =[];
-   for (var i = 0; i < arr.length; i++) {
-    if (Array.isArray(arr[i])){
-        if(arr[i].length<1){
-            var blankArr = [];
-            newArr.push(blankArr);
-        
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (Array.isArray(arr[i])) {
+      if (arr[i].length > 0) {
+        arr[i] = arr[i].join();
+        arr[i] = arr[i].split(",");
+        var arrStr = arr[i];
+        for (let j = 0; j < arrStr.length; j++) {
+          if (/[0-9]/.test(arrStr[j])) {
+            arrStr[j] = Number(arrStr[j]);
+          }
+
         }
-        else {
-            arr[i] = arr[i].join();
-            arr[i] = arr[i].split(",");
-            var arrStr = arr[i];
-            for (let i = 0; i < arrStr.length; i++) {
-                if(typeof(arrStr[i])=== Number){
-                 arrStr[i] = Number(arrStr[i]);
-                }
-                
-            }
-            newArr = newArr.concat(arrStr);
-        }
-     
-      
+        newArr = newArr.concat(arrStr);
+      }
+    } else {
+      newArr.push(arr[i]);
     }
-    else{
-        newArr.push(arr[i]);
-    }
-   }
-    return newArr;
-  
+  }
+  return newArr;
 }
-  
-  console.log(steamrollArray([1, [], [3, [[4]]]]));
-  
-  
+console.log(steamrollArray([
+  [
+    ["a"]
+  ],
+  [
+    ["b"]
+  ]
+]));
