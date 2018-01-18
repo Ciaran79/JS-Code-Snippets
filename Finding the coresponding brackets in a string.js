@@ -1,4 +1,4 @@
-function solve(str, idx) {
+function matchingBracket(str, idx) {
     let arr = str.split('');
     let count = 0;
     if (idx > arr.length || idx < 0 || arr.length <= 1 || arr[idx] != "(") {
@@ -19,4 +19,4 @@ function solve(str, idx) {
     return -1;
 }
 
-console.log((solve("(>_(va)`?(h)C(as)(x(hD)P|(fg)))",19)));
+console.log((matchingBracket("(>_(va)`?(h)C(as)(x(hD)P|(fg)))",0)));
